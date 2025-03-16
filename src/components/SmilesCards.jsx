@@ -17,7 +17,7 @@ export class SmilesCards extends React.Component {
   render() {
     return (
       <div className="smiles-cards-container">
-        {this.state.smiles.map(item => <SmileCard key={item.id} smile={item}></SmileCard>)}
+        {this.state.smiles.map(item => <SmileCard key={item.id} smile={item} onVote={this.props.onVote}></SmileCard>)}
       </div>
     );
   }
