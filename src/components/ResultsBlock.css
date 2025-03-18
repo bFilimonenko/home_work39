@@ -1,0 +1,26 @@
+div.result-place-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    &:nth-child(1) {
+        color: gold;
+        text-shadow: 0 0 15px gold;
+    }
+
+    &:nth-child(2) {
+        color: silver;
+        text-shadow: 0 0 10px silver;
+    }
+
+    &:nth-child(3) {
+        color: saddlebrown;
+        text-shadow: 0 0 5px saddlebrown;
+    }
+}
+
+div.result-place-block p {
+    font-size: 40px;
+    font-weight: bold;
+}
