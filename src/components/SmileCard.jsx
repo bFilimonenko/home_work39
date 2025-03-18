@@ -1,10 +1,10 @@
 import { IconButton } from "@mui/material";
 import { Favorite } from "@mui/icons-material";
 
-export const SmileCard = ({ smile, onVote }) => {
-
+export const SmileCard = ({ smile, vote, setVote }) => {
   const handleClick = () => {
-    onVote(smile.id)
+    vote ? setVote((prev) => ({ ...prev, [smile.id]: vote + 1 }))
+      : setVote(((prev) => ({ ...prev, [smile.id]: 1 })));
   };
 
   return (
@@ -13,7 +13,7 @@ export const SmileCard = ({ smile, onVote }) => {
       <p>{smile.description}</p>
 
       <IconButton color="error" aria-label="favorite" onClick={handleClick}>
-        <Favorite />
+        <Favorite/>
       </IconButton>
     </div>
   );
